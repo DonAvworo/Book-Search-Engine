@@ -1,0 +1,15 @@
+to install apollo-server-express and graphql as dependencies, 
+and apollo-server-testing as a dev dependency use the following command:
+
+TODO: add the command
+npm install apollo-server-express graphql apollo-server-testing
+
+apollo client setup
+
+To install apollo client and graphql as dependencies use the following command:
+TODO add the command    
+npm install apollo-boost graphql or 
+yarn add apollo-boost graphql or 
+pnpm add apollo-boost graphql
+
+
