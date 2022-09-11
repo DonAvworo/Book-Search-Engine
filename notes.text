@@ -42,7 +42,7 @@ npm install apollo-boost graphql or
 yarn add apollo-boost graphql or 
 pnpm add apollo-boost graphql
 
-================================================================================================
+==================================================================================================
 message from terminal after running npm run develop
 ================================================================================================
 
@@ -80,9 +80,90 @@ To fix the dependency tree, try following the steps below in the exact order:
  If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
  That would permanently disable this preflight check in case you want to proceed anyway.
  
+====================================================================================================================
+CRASH ERROR DEBUGING
+====================================================================================================================
+PROBLEM:
+1 |  node:internal/modules/cjs/loader:958
+   throw err; 
+   ^
+   rror: Cannot find module 'apollo-server-express'
+ Require stack:
+/Users/donavworo/manchester-u-bootcamp/Book-Search-Engine/server/server.js
+
+SOLUTION: 
+1 |  Run
+npm install apollo-server-express
+
+PROBLEM:
+2 | apollo-server-express fails to install
+
+SOLUTION: 
+2 | Run
+npm uninstall apollo-server-express
+    - Successful
+
+rm -f package-lock.json
+    - Successful
+rm -rf node_modules
+    - Successful
+npm install apollo-server-express
+    - Successful
+npm i  
+    - Successful
+npm i --save apollo-server-express@3..8.0
+        - npm ERR! code ETARGET
+        npm ERR! notarget No matching version found for apollo-server-express@3..8.0.
+        npm ERR! notarget In most cases you or one of your dependencies are requesting
+        npm ERR! notarget a package version that doesn't exist.
+
+try using yarn instead of npm to install apollo-server-express
+how to install yarn on mac
+    - brew install yarn
+how to use yarn to install apollo-server-express
+    - yarn add apollo-server-express
+
+try using yarn instead of npm to install apollo-server-express
+    - unsuccessful
+    [2/4] 🚚  Fetching packages...
+    error @apollo/federation@0.27.0: The engine "node" is incompatible with this module. 
+    Expected version ">=12.13.0 <17.0". Got "18.8.0"
+    error Found incompatible module.
+
+try downgrading node version to 12.13.0 or less than 17.0
 
 
+how to downgrade node version
+    - brew install node 12.13.0 or less than 17.0
+      - Unsuccessful
+...................................................
+npm install -g n
+    - Successful
+
+THEN:
+sudo npm cache clean -f
+    - Successful
+
+THEN:   
+n 17.0
+    - Not Successful
+
+THEN:
+sudo n 17.0  (enter password)
+    - Successful
+
+Message:
+donavworo@Dons-Mac-Pro Book-Search-Engine % sudo n 17.0
+Password:
+  installing : node-v17.0.1
+       mkdir : /usr/local/n/versions/node/17.0.1
+       fetch : https://nodejs.org/dist/v17.0.1/node-v17.0.1-darwin-x64.tar.xz
+     copying : node/17.0.1
+   installed : v17.0.1 (with npm 8.1.0)
+donavworo@Dons-Mac-Pro Book-Search-Engine % 
+
+THEN:
+- yarn add apollo-server-express
 
 
-
- 
+...................................................
