@@ -1,3 +1,33 @@
+Project Notes
+===============================================================================
+
+what is a mutation in java scripts?
+
+A mutation is a change in the source code of a program. It is a change that is
+introduced by a developer to the source code of a program. The mutation is
+introduced to test the ability of the test suite to detect the change. If the
+test suite is able to detect the change, then the test suite is said to be
+able to detect the mutation. If the test suite is not able to detect the
+change, then the test suite is said to be unable to detect the mutation.
+
+code example of mutation in java scripts
+
+public class MutantExample {
+    public static void main(String[] args) {  
+        int x = 0;
+        int y = 0;
+        if (x == 0) {
+            y = 1;
+        }
+        System.out.println("y = " + y);
+    }
+}
+
+
+
+
+
+
 to install apollo-server-express and graphql as dependencies, 
 and apollo-server-testing as a dev dependency use the following command:
 
